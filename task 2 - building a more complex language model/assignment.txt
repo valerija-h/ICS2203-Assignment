@@ -1,0 +1,13 @@
+You now should have the code that splits the data into train & test sets, uni, bi- and trigrams in place. You should also have in place the Vanilla Language Models. 
+
+In the next task, we will train new models with a slight modification. All words in the training dataset with a count of 1 will be changed into <UNK> tokens. You will pass this through exactly the same process and create new models, let's call these the UNK Language Models. This means that the new models will be able to give a probability for a word in the test set when that word is not actually encountered in the training set. 
+
+You should also include Linear Interpolation that assigns fixed weights to the models as follows: Trigram (0.6), Bigram (0.3) and Unigram (0.1).
+
+Once you have both the Vanilla and the UNK models in place, you can use the test set to determine the probability of a sentence. If there are unknown word/s, the Vanilla model will give a probability of 0, whilst the UNK model should provide a probability because unknown words are catered for. 
+
+In order to test the models, (i) create a function called generate_model(first_word), that given a starting word as input, will generate a sentence; and (ii) create a function called check_sentence(sentence) that takes a sentence as input and provides the probabilities from the two models. You can assume that the sentence inputted is space delimited so that you can simply use the split() function to get the sentence tokenised (e.g. "Dan il- kelb huwa kbir .")
+
+Submission guidelines: As before, you should have a README file that describes your setup and what you've done. Zip everything and submit a single file. 
+
+Also note that you can save your models in python as a pickle object or in java as a serialisable object. If you are using a different language, search for serialization. 

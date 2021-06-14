@@ -1,0 +1,13 @@
+(i) Pick a corpus;
+(ii) check corpus and see what sort of processing you need to do - if you are using the BNC, you do not need to build a perfect tokeniser, an imperfect but practical one will do - of course, the errors will propagate into your language model, but that is ok;
+(iii) decide on how you will store the information (i.e. plan ahead);
+(iv) split the data into 80/20 (keep the same split for later - i.e. split only once)
+(v) first build Unigram frequencies/probabilities, then Bigram and then Trigram; 
+(vi) consider storage options so that you build your n-gram models only once;
+
+Corpora choices:
+Maltese Corpus: http://mlrs.research.um.edu.mt/index.php?page=downloads
+(Baby) British National Corpus: http://ota.ox.ac.uk/desc/2553
+
+Upload:
+zip file containing your code, a scanned signed plagiarism form, and a README.txt file with a brief explanation of your setup, corpus used, decisions made in terms of storage, approx how long your models take to build, and any other useful information that will help me run your code. If you like to put screenshots and make it pretty, doc or pdf will work too, but optional. 
